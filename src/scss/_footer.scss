@@ -254,7 +254,7 @@ svg{
       max-width: 30rem;
     }
   
-    @include bp($point_7) {
+    @include bp($point_6) {
       max-width: 30rem;
     }
   }
@@ -281,7 +281,7 @@ svg{
       right: -1.5rem;
     }
   
-    @include bp($point_7) {
+    @include bp($point_6) {
       height: 2rem;
       width: 2rem;
       top: -1rem;
@@ -308,7 +308,7 @@ svg{
         height: 4rem;
       }
   
-      @include bp($point_7) {
+      @include bp($point_6) {
         width: 3rem;
         height: 3rem;
       }
@@ -333,7 +333,7 @@ svg{
           height: 3.5rem;
         }
     
-        @include bp($point_7) {
+        @include bp($point_6) {
           width: 2.5rem;
           height: 2.5rem;
         }
@@ -359,7 +359,7 @@ svg{
       height: 0.4rem;
     }
   
-    @include bp($point_7) {
+    @include bp($point_6) {
       width: 1.2rem;
       height: 0.2rem;
     }

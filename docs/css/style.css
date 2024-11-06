@@ -2960,17 +2960,6 @@ svg {
     margin-bottom: 2rem;
   }
 
-  .reputation_w {
-    flex: 1 1 100%;
-  }
-
-  .servs_w {
-    /* width: calc((100% - 2 * 98px) / 3);*/
-    flex: 1 1 100%;
-  }
-}
-
-@media screen and (max-width: 375px) {
   .popup__in {
     max-width: 30rem;
   }
@@ -2996,6 +2985,15 @@ svg {
   .popup__close::before {
     width: 1.2rem;
     height: 0.2rem;
+  }
+
+  .reputation_w {
+    flex: 1 1 100%;
+  }
+
+  .servs_w {
+    /* width: calc((100% - 2 * 98px) / 3);*/
+    flex: 1 1 100%;
   }
 }
 
