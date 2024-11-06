@@ -1,0 +1,118 @@
+@import "./mixin";
+
+html,
+body {
+  font-family: "Worksans";
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+}
+
+@include bpd($point_2, 1920px) {
+  html {
+    font-size: calc((100dvw / 1920) * 10);
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.section {
+  max-width: 144rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.section--blue {
+  max-width: none;
+  background-color: #f6f8f7;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 132rem;
+  margin: 0 auto;
+}
+
+@include bp($point_4, min) {
+  .container {
+    padding: 0 6rem;
+  }
+}
+
+@include bp($point_5) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.container--width-2 {
+  max-width: 113rem;
+  width: 100%;
+  overflow: hidden;
+}
+.container--width-3 {
+  max-width: 68rem;
+  width: 100%;
+}
+
+.changeMessage{
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+}
+
+.er{
+  color: red;
+  opacity: 0;
+}
+
+.form ._error{
+  border: 0.1rem solid red;
+}
+
+
+
+.succes .er{
+  opacity: 1;
+  color: rgb(0, 255, 0);
+}
+._error ~ .er{
+  opacity: 1 ;
+}
+
+.form{
+  &::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: black, $alpha: 0.8) url("../img/loading.gif")
+      center / 5rem no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+}
+.form._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
